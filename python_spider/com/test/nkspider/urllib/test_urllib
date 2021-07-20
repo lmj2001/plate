@@ -1,0 +1,33 @@
+#### 导入urllib的支持，顶级导入  import urllib
+
+#### 在这个程序中只能使用open的方法，只是完成单一导入  from urllib.request import urlopen
+
+#### 推荐使用, 指明导入urllib下request模块下的所有功能
+import urllib.request
+import os  ##获取路径和文件夹的信息
+
+## 获取百度首页的图片并且下载
+## 解析获取url
+url = "https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png"
+
+## 发送对url的请求，获取响应
+resp = urllib.request.urlopen(url)  ## 打开连接，同时发送请求
+
+## 获取响应的内容
+resp_content = resp.read()
+
+## 获取响应内容中的实际数据
+data = resp_content
+
+##Python io
+##确定文件的名称
+file_name = "baidu.png"
+## file_name = url.split("/")[-1] 最后的名称
+
+## 当前文件所在的文件夹位置的data目录
+file_path = os.path.join(os.getcwd(), 'data')
+
+## 完成文件的读写,os.sep根据操作系统决定分割符
+with open(file_path+os.sep+file_name,'wb') as fp :
+    fp.write(data)
+    print("finish....")
