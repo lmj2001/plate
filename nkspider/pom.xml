@@ -13,6 +13,20 @@
         <maven.compiler.target>15</maven.compiler.target>
     </properties>
     <dependencies>
+        <!-- selenium 依赖 -->
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <!-- Tess4J 依赖 -->
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+        <dependency>
+            <groupId>net.sourceforge.tess4j</groupId>
+            <artifactId>tess4j</artifactId>
+            <version>4.5.4</version>
+        </dependency>
         <!-- WebMagic 依赖 -->
         <dependency>
             <groupId>us.codecraft</groupId>
